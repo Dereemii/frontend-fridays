@@ -20,10 +20,11 @@
   },
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack --config webpack.config.js --mode production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "npm run start",
+    "start": "webpack-dev-server --config webpack.config.js --mode development"
   }
 }

@@ -14,30 +14,53 @@ const stylesHandler = isProduction
 
 const config = {
   context: path.join(__dirname, "src"),
-  entry: [  "./index.js", "./styles/styles.scss"],
+  entry: [  "./index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, '/dist'),
+    },
     open: true,
     host: "localhost",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      //template: "index.html",
+      template: "../index.html",
     }),
+   
+    new HtmlWebpackPlugin({
+      template: "pages/november18.html",
+      inject: true,
+      chunks : ['november18'],
+      filename: 'pages/november18.html'
+    }), 
+    new HtmlWebpackPlugin({
+      template: "pages/dec2.html",
+      inject: true,
+      chunks : ['dec2'],
+      filename: 'pages/dec2.html'
+    }), 
+    new HtmlWebpackPlugin({
+      template: "pages/dec9.html",
+      inject: true,
+      chunks : ['dec9'],
+      filename: 'pages/dec9.html'
+    }), 
 
-    new CopyWebpackPlugin({
+    /*new CopyWebpackPlugin({ //assets only
       patterns: [
-       { from: "./pages", to: "pages"}
+      { from: "./pages", to: "pages"}
       ]
-    })
+    })*/
+   
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
+    
     rules: [
       {
         test: /\.(js|jsx)$/i,
@@ -61,15 +84,17 @@ const config = {
     ],
   },
 };
-
 module.exports = () => {
   if (isProduction) {
+    console.log("=====prod mode on====");
     config.mode = "production";
 
+   // config.plugins.push(new )
     config.plugins.push(new MiniCssExtractPlugin());
 
   } else {
     config.mode = "development";
+    
   }
   return config;
 };
