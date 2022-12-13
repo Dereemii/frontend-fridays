@@ -4,6 +4,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = isProduction
@@ -11,18 +13,26 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const config = {
-  entry: [ "./src/index.js", "./src/styles/styles.scss"],
+  context: path.join(__dirname, "src"),
+  entry: [  "./index.js", "./styles/styles.scss"],
   output: {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
+    contentBase: path.join(__dirname, 'dist'),
     open: true,
     host: "localhost",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      //template: "index.html",
     }),
+
+    new CopyWebpackPlugin({
+      patterns: [
+       { from: "./pages", to: "pages"}
+      ]
+    })
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -57,8 +67,10 @@ module.exports = () => {
     config.mode = "production";
 
     config.plugins.push(new MiniCssExtractPlugin());
+
   } else {
     config.mode = "development";
   }
   return config;
 };
+
