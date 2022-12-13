@@ -55,11 +55,12 @@ const config = {
       filename: 'pages/dec13.html'
     }),
 
-    /*new CopyWebpackPlugin({ //assets only
-      patterns: [
-      { from: "./pages", to: "pages"}
-      ]
-    })*/
+    new CopyWebpackPlugin({ //assets only
+      patterns: [{
+        from: "./assets",
+        to: "assets"
+      }]
+    })
 
 
     // Add your plugins here
@@ -81,14 +82,14 @@ const config = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "src/asset",
+        type: "asset",
       },
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
-  
+
 };
 module.exports = () => {
   if (isProduction) {
