@@ -49,11 +49,11 @@ const config = {
       filename: 'pages/dec9.html'
     }), 
 
-    /*new CopyWebpackPlugin({ //assets only
+    new CopyWebpackPlugin({ //assets only
       patterns: [
-      { from: "./pages", to: "pages"}
+      { from: "./assets", to: "assets"}
       ]
-    })*/
+    })
    
 
     // Add your plugins here
@@ -68,11 +68,11 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "sass-loader"],
+        use: [ "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
