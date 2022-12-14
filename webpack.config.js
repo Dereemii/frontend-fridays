@@ -8,13 +8,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == "production";
 
-const stylesHandler = isProduction
-  ? MiniCssExtractPlugin.loader
-  : "style-loader";
+const stylesHandler = isProduction ?
+  MiniCssExtractPlugin.loader :
+  "style-loader";
 
 const config = {
   context: path.join(__dirname, "src"),
-  entry: [  "./index.js"],
+  entry: ["./index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -29,40 +29,46 @@ const config = {
     new HtmlWebpackPlugin({
       template: "../index.html",
     }),
-   
+
     new HtmlWebpackPlugin({
       template: "pages/november18.html",
       inject: true,
-      chunks : ['november18'],
+      chunks: ['november18'],
       filename: 'pages/november18.html'
-    }), 
+    }),
     new HtmlWebpackPlugin({
       template: "pages/dec2.html",
       inject: true,
-      chunks : ['dec2'],
+      chunks: ['dec2'],
       filename: 'pages/dec2.html'
-    }), 
+    }),
     new HtmlWebpackPlugin({
       template: "pages/dec9.html",
       inject: true,
-      chunks : ['dec9'],
+      chunks: ['dec9'],
       filename: 'pages/dec9.html'
-    }), 
+    }),
+    new HtmlWebpackPlugin({
+      template: "pages/dec13.html",
+      inject: true,
+      chunks: ['dec13'],
+      filename: 'pages/dec13.html'
+    }),
 
     new CopyWebpackPlugin({ //assets only
-      patterns: [
-      { from: "./assets", to: "assets"}
-      ]
+      patterns: [{
+        from: "./assets",
+        to: "assets"
+      }]
     })
-   
+
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
-    
-    rules: [
-      {
+
+    rules: [{
         test: /\.(js|jsx)$/i,
         loader: "babel-loader",
       },
@@ -83,19 +89,19 @@ const config = {
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
+
 };
 module.exports = () => {
   if (isProduction) {
     console.log("=====prod mode on====");
     config.mode = "production";
 
-   // config.plugins.push(new )
+    // config.plugins.push(new )
     config.plugins.push(new MiniCssExtractPlugin());
 
   } else {
     config.mode = "development";
-    
+
   }
   return config;
 };
-
