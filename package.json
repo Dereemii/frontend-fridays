@@ -26,5 +26,8 @@
     "watch": "webpack --watch",
     "serve": "npm run start",
     "start": "webpack-dev-server --config webpack.config.js --mode development"
+  },
+  "dependencies": {
+    "image-webpack-loader": "^8.1.0"
   }
 }
