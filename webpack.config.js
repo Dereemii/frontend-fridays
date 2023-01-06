@@ -54,6 +54,12 @@ const config = {
       chunks: ['dec13'],
       filename: 'pages/dec13.html'
     }),
+     new HtmlWebpackPlugin({
+       template: "pages/january6.html",
+       inject: true,
+       chunks: ['january6'],
+       filename: 'pages/january6.html'
+     }),
 
     new CopyWebpackPlugin({ //assets only
       patterns: [{
