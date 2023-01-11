@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Front End Friday</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /*Demo purposes only*/
-        body {
-            padding: 0 20px;
-        }
-    </style>
+    <title>Notifications by Luz De Leon</title>
 
     <style>
         a.wwcode-link {
@@ -675,42 +668,180 @@
             font-family: Arial, Helvetica, sans-serif
         }
     </style>
+    
+    <style>
+        :root{
+            --success-light: #C4F6DC; 
+            --success-dark: #4ABA7E;
+            --danger-light: #FACCC7;
+            --danger-dark: #E9594E;
+            --warning-light: #FBE8CA;
+            --warning-dark: #DA9F3E;
+            --black: #000;
+        }
+
+        div[class^="notification"] {
+            position: relative;
+            display: grid;
+            grid-template-columns: 90% 10%;
+            border-radius: 10px;
+            font-family: "Lucida Grande";
+            padding: 1rem 1rem 1rem 1.5rem;
+            margin: 1rem 0;
+        }
+
+        div[class^="notification"] .--title {
+            font-weight: 700;
+            grid-column-start: 1;
+        }
+
+        div[class^="notification"]:after{
+            content: " ";
+            position:absolute;
+            width: 1rem;
+            height: 100%;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            top: 0;
+            left: 0;
+        }
+
+        div[class^="notification"] .--close{
+            grid-column-start: 2;
+            grid-row: 1 / 3;
+        }
+
+        .--close button {
+            display: flex;
+            border: none;
+            background: transparent;
+            padding: 0.5rem;
+            width: 100%;
+            height: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .notification__success {
+            flex: 0 1 80%;
+            background-color: var(--success-light);
+            border: solid 1px var(--success-dark);
+            color: var(--success-dark);
+        }
+
+        .notification__success svg {
+            fill: var(--success-dark);
+        }
+
+        .notification__success:after{
+            background-color: var(--success-dark);
+        }
+
+        .notification__warning {
+            background-color: var(--warning-light);
+            border: solid 1px var(--warning-dark);
+            color: var(--warning-dark);
+        }
+
+        .notification__warning svg {
+            fill: var(--warning-dark);
+        }
+
+        .notification__warning:after{
+            background-color: var(--warning-dark);
+        }
+
+        .notification__danger {
+            background-color: var(--danger-light);
+            border: solid 1px var(--danger-dark);
+            color: var(--danger-dark);
+        }
+
+        .notification__danger svg {
+            fill: var(--danger-dark);
+        }
+
+        .notification__danger:after{
+            background-color: var(--danger-dark);
+        }
+
+        div[class^="notification"] .--title {
+            color: inherit;
+            margin-top: 0;
+        }
+
+        div[class^="notification"] .--description {
+            color: var(--black);
+            margin-top: 0;
+            margin-bottom: 0;
+            grid-column-start: 1;
+            grid-row-start: 2;
+        }
+
+        
+    </style>
 </head>
+<body>
+    <h1>Notifications - Code Challenge on Jan 6</h1>
+    <p>Click on any of the notifications close button ;)</p>
+    <section class="problem">
+        <p><strong>Code UI alerts:</strong></p>
+    </section>
 
-<body class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold my-3.5">Welcome to our Front End Fridays Repository!</h1>
-    <section>
-
-        <div class="columns-12 flex flex-col">
-            <div class="mb-4">
-                <p class="font-bold text-xl">November</p>
-                <ul>
-                    <li><a href="pages/november18.html" class="wwcode-link">Nov 18th - 2022 </a></li>
-                </ul>
-            </div>
-
-
-            <div>
-                <p class="font-bold text-xl">December</p>
-                <ul>
-                    <li><a href="pages/dec2.html" class="wwcode-link">Card-Timer by Poulami Saha</a></li>
-                    <li><a href="pages/dec9.html" class="wwcode-link">Boading pass by Mariya Harizanova</a></li>
-                    <li><a href="pages/dec13.html" class="wwcode-link">Card-Timer by Mariya Harizanova</a></li>
-                </ul>
-            </div>
-
-
-            <div>
-                <p class="font-bold text-xl">January</p>
-                <ul>
-                    <li><a href="pages/january6.html" class="wwcode-link">Info Cards by Mariya Harizanova</a></li>
-                    <li><a href="pages/jan6.html" class="wwcode-link">Banners by Poulami Saha</a></li>
-                    <li><a href="pages/jan6-luz.html" class="wwcode-link">Notifications by Luz De Leon</a></li>
-                </ul>
+    <section class="solution">
+        <div class="notification__danger">
+            <p class="--title">Danger</p>
+            <p class="--description">This site may harm your computer.</p>
+            <div class="--close">
+                <button>
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="#DA9F3E" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1088 1.41L14.4864 0L8.05438 5.59L1.62238 0L0 1.41L6.432 7L0 12.59L1.62238 14L8.05438 8.41L14.4864 14L16.1088 12.59L9.67676 7L16.1088 1.41Z" />
+                    </svg>
+                        
+                </button>
             </div>
         </div>
-
+        <div class="notification__warning">
+            <p class="--title">Warning</p>
+            <p class="--description">We have detected some harmful content here.</p>
+            <div class="--close">
+                <button>
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="#DA9F3E" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1088 1.41L14.4864 0L8.05438 5.59L1.62238 0L0 1.41L6.432 7L0 12.59L1.62238 14L8.05438 8.41L14.4864 14L16.1088 12.59L9.67676 7L16.1088 1.41Z" />
+                    </svg>
+                        
+                </button>
+            </div>
+        </div>
+        <div class="notification__success">
+            <p class="--title">Success</p>
+            <p class="--description">You have successfully completed a challenge. </p>
+            <div class="--close">
+                <button>
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="#DA9F3E" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.1088 1.41L14.4864 0L8.05438 5.59L1.62238 0L0 1.41L6.432 7L0 12.59L1.62238 14L8.05438 8.41L14.4864 14L16.1088 12.59L9.67676 7L16.1088 1.41Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </section>
-</body>
 
+    <script>
+        
+
+        let buttons = document.querySelectorAll("button");
+        
+        [].forEach.call(buttons, function(el){
+            el.addEventListener("click", function(e){
+                //Remove the Alert
+                let targetElement = e.target;
+
+                let parent = targetElement.closest("[class^='notification']");                
+                
+                parent.parentNode.removeChild(parent);
+            })
+        })
+    </script>
+</body>
 </html>

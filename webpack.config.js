@@ -60,6 +60,18 @@ const config = {
        chunks: ['january6'],
        filename: 'pages/january6.html'
      }),
+     new HtmlWebpackPlugin({
+      template: "pages/jan6.html",
+      inject: true,
+      chunks: ['jan6'],
+      filename: 'pages/jan6.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "pages/jan6-luz.html",
+      inject: true,
+      chunks: ['jan6-luz'],
+      filename: 'pages/jan6-luz.html'
+    }),
 
     new CopyWebpackPlugin({ //assets only
       patterns: [{
@@ -80,11 +92,11 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "sass-loader"],
+        use: [ "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
