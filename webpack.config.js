@@ -72,13 +72,31 @@ const config = {
        chunks: ['january-wallet'],
        filename: 'pages/january-wallet.html'
      }),
+
          new HtmlWebpackPlugin({
            template: 'pages/wallet-card.html',
            inject: true,
            chunks: ['wallet-card'],
            filename: 'pages/wallet-card.html'
          }),
-
+     new HtmlWebpackPlugin({
+      template: "pages/jan6.html",
+      inject: true,
+      chunks: ['jan6'],
+      filename: 'pages/jan6.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "pages/jan6-luz.html",
+      inject: true,
+      chunks: ['jan6-luz'],
+      filename: 'pages/jan6-luz.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "pages/jan13-poulami.html",
+      inject: true,
+      chunks: ['jan13-poulami'],
+      filename: 'pages/jan13-poulami.html'
+    }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",
@@ -98,11 +116,11 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "sass-loader"],
+        use: [ "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
