@@ -54,12 +54,31 @@ const config = {
       chunks: ['dec13'],
       filename: 'pages/dec13.html'
     }),
+    new HtmlWebpackPlugin({
+      template: "pages/january6.html",
+      inject: true,
+      chunks: ['january6'],
+      filename: 'pages/january6.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'pages/january18.html',
+      inject: true,
+      chunks: ['january18'],
+      filename: 'pages/january18.html'
+    }),
      new HtmlWebpackPlugin({
-       template: "pages/january6.html",
+       template: 'pages/january-wallet.html',
        inject: true,
-       chunks: ['january6'],
-       filename: 'pages/january6.html'
+       chunks: ['january-wallet'],
+       filename: 'pages/january-wallet.html'
      }),
+
+         new HtmlWebpackPlugin({
+           template: 'pages/wallet-card.html',
+           inject: true,
+           chunks: ['wallet-card'],
+           filename: 'pages/wallet-card.html'
+         }),
      new HtmlWebpackPlugin({
       template: "pages/jan6.html",
       inject: true,
