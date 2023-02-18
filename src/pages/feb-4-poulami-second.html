@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>February 4</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Inter"
+    />
+    <style>
+      .container {
+        width: 226px;
+        height: 374px;
+        border: 1px solid rgba(30, 30, 30, 0.2);
+        border-radius: 20px;
+        padding-top: 16px;
+        padding-block-start: 26px;
+        padding-block-end: 17px;
+        padding-inline-start: 28px;
+        padding-inline-end: 22px;
+      }
+      .font-style {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 15px;
+        color: #6a6a6a;
+      }
+      .font-big {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 0px;
+      }
+      .add-card {
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .card-number {
+        color: #bb27a7;
+      }
+
+      .card {
+        margin-block-end: 16px;
+        height: 84px;
+        padding-inline: 12px;
+        border: 1px solid rgba(114, 113, 113, 0.4);
+        border-radius: 2px;
+      }
+      .font {
+        font-family: "Inter";
+        font-style: normal;
+        font-size: 8px;
+        line-height: 0;
+      }
+      .colors {
+        font-weight: 300;
+        color: #bb27a7;
+      }
+      .text {
+        font-weight: 700;
+        color: #1e1e1e;
+      }
+      .flex-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo-margin {
+        margin-top: 6px;
+      }
+
+      .header {
+        font-size: 14px;
+        color: #626060;
+        width: 200px;
+        padding-inline-start: 23px;
+        text-align: center;
+      }
+      .header-list-margin {
+        margin-block-end: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container space">
+      <p class="header font-style header-list-margin">
+        <b>My Digital Wallet</b>
+      </p>
+      <div class="card-list"></div>
+    </div>
+  </body>
+
+  <script>
+    let card1 = {
+      cardnumber: "4519 5133 0799 0830",
+      user: "Poulami H.",
+      ccv: "123",
+      validity: "08/27",
+      cardType: "mc_2.svg",
+    };
+    let card2 = {
+      cardnumber: "4519 0923 5419 1234",
+      user: "Luz D.",
+      ccv: "123",
+      validity: "12/12",
+      cardType: "visa_2.svg",
+    };
+
+    let cardList = [card1, card2];
+    const newCard = JSON.parse(localStorage.getItem("card"));
+    newCard.cardType = "visa_2.svg";
+
+    cardList.push(newCard);
+
+    let cardListContainer = document.querySelector(".card-list");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      for (let card of cardList) {
+        const contentCard = `
+                <div class="card">
+                    <p class="card-number font-big"><b>${card.cardnumber}</b></p>
+                    <div class="flex-details">
+                        <p class="text font">
+                        <b>Valid Thru</b> <span class="colors font"> ${card.validity}</span>
+                        </p>
+                        <p class="text font">
+                        <b>CCV <span class="colors font">***</span></b>
+                        </p>
+                    </div>
+                    <div class="flex-details logo-margin">
+                        <p class="text font"><b>${card.user}</b></p>
+                        <img src="../assets/${card.cardType}" />
+                    </div>
+                </div>
+        `;
+        cardListContainer.innerHTML += contentCard;
+      }
+    });
+  </script>
+</html>

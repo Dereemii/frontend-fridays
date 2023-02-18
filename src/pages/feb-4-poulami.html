@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>February 4</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Inter"
+    />
+    <style>
+      .main-container {
+        display: flex;
+        flex-direction: row;
+        font-family: "Inter";
+        font-style: normal;
+      }
+      .container {
+        width: 226px;
+        height: 374px;
+        border: 1px solid rgba(30, 30, 30, 0.2);
+        border-radius: 20px;
+        padding-top: 16px;
+        padding-block-start: 26px;
+        padding-block-end: 17px;
+        padding-inline-start: 28px;
+        padding-inline-end: 22px;
+      }
+      .font-style {
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 15px;
+        color: #6a6a6a;
+      }
+      .text {
+        line-height: 10px;
+        font-weight: 700;
+        font-size: smaller;
+      }
+      .card-text {
+        margin-block-start: 22px;
+        margin-block-end: 2px;
+      }
+      .header {
+        font-size: 14px;
+        color: #626060;
+        width: 200px;
+        padding-inline-start: 23px;
+        text-align: center;
+      }
+      .header-add-margin {
+        margin-block-end: 30px;
+      }
+      .placeholder {
+        height: 28px;
+        background: #d9d9d9;
+        text-align: center;
+      }
+
+      .placeholder-card {
+        height: 28px;
+        background: #d9d9d9;
+        width: 226px;
+        border-color: none !important;
+      }
+      .valid {
+        margin-block: 4px;
+      }
+      .ccv {
+        margin-block-start: 7px;
+        margin-block-end: 1px;
+      }
+      .cvv {
+        width: 60px;
+      }
+      .month {
+        width: 80px;
+      }
+      .year {
+        margin-inline-start: 15px;
+        width: 120px;
+      }
+      .name {
+        margin-block: 5px;
+      }
+      .validity {
+        display: flex;
+        flex-direction: row;
+      }
+      .button {
+        margin-top: 76px;
+        width: 176px;
+        height: 38px;
+        background: #bb27a7;
+        border: 1px solid #bb27a7;
+        border-radius: 20px;
+        margin-inline-start: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .font-big {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 0px;
+      }
+      .add-card {
+        color: #ffffff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <form class="container" id="cardForm">
+        <p class="header font-style header-add-margin">
+          <b>Add New Card to Wallet</b>
+        </p>
+        <p class="text card-text">Card Number</p>
+        <input
+          id="cardnumber"
+          type="text"
+          class="placeholder-card"
+          minlength="16"
+          maxlength="16"
+          required
+        />
+        <p class="text valid">Valid Thru</p>
+        <div class="validity">
+          <select id="month" class="placeholder month">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <select id="year" class="placeholder year">
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+          </select>
+        </div>
+        <p class="text ccv">ccv</p>
+        <input
+          type="text"
+          id="ccv"
+          class="placeholder-card cvv"
+          minlength="3"
+          maxlength="3"
+          required
+        />
+        <p class="text name">Name on Card</p>
+        <input
+          type="text"
+          id="user"
+          class="placeholder-card"
+          maxlength="30"
+          required
+        />
+        <input
+          id="add"
+          type="submit"
+          class="button add-card font-big"
+          value="Add Card"
+        />
+      </form>
+    </div>
+  </body>
+
+  <script>
+    let form = document.getElementById("cardForm");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      let monthIndex = form.month.selectedIndex;
+      let month = form.month.options[monthIndex].value;
+      let yearIndex = form.year.selectedIndex;
+      let year = form.year.options[yearIndex].value;
+
+      let validity = month + "/" + year.substring(2);
+      let cardNumber = document.getElementById("cardnumber").value;
+      let ccv = document.getElementById("ccv").value;
+      let user = document.getElementById("user").value;
+
+      const newCard = {
+        cardnumber: cardNumber.match(/.{1,4}/g).join(" "),
+        user: user,
+        ccv: ccv,
+        validity: validity,
+        
+      };
+      const json = JSON.stringify(newCard);
+      localStorage.setItem("card", json);
+
+      window.location.href = "feb-4-poulami-second.html";
+    });
+  </script>
+</html>
