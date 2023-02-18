@@ -97,6 +97,12 @@ const config = {
       chunks: ['jan13-poulami'],
       filename: 'pages/jan13-poulami.html'
     }),
+     new HtmlWebpackPlugin({
+       template: "pages/calculator.html",
+       inject: true,
+       chunks: ['calculator'],
+       filename: 'pages/calculator.html'
+     }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",
