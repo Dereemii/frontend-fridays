@@ -66,20 +66,20 @@ const config = {
       chunks: ['january18'],
       filename: 'pages/january18.html'
     }),
-     new HtmlWebpackPlugin({
-       template: 'pages/january-wallet.html',
-       inject: true,
-       chunks: ['january-wallet'],
-       filename: 'pages/january-wallet.html'
-     }),
+    new HtmlWebpackPlugin({
+      template: 'pages/january-wallet.html',
+      inject: true,
+      chunks: ['january-wallet'],
+      filename: 'pages/january-wallet.html'
+    }),
 
-         new HtmlWebpackPlugin({
-           template: 'pages/wallet-card.html',
-           inject: true,
-           chunks: ['wallet-card'],
-           filename: 'pages/wallet-card.html'
-         }),
-     new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
+      template: 'pages/wallet-card.html',
+      inject: true,
+      chunks: ['wallet-card'],
+      filename: 'pages/wallet-card.html'
+    }),
+    new HtmlWebpackPlugin({
       template: "pages/jan6.html",
       inject: true,
       chunks: ['jan6'],
@@ -98,12 +98,12 @@ const config = {
       filename: 'pages/jan13-poulami.html'
     }),
 
-     new HtmlWebpackPlugin({
-       template: "pages/calculator.html",
-       inject: true,
-       chunks: ['calculator'],
-       filename: 'pages/calculator.html'
-     }),
+    new HtmlWebpackPlugin({
+      template: "pages/calculator.html",
+      inject: true,
+      chunks: ['calculator'],
+      filename: 'pages/calculator.html'
+    }),
 
     new HtmlWebpackPlugin({
       template: "pages/jan27-poulami.html",
@@ -129,7 +129,12 @@ const config = {
       chunks: ['feb-4-poulami-second'],
       filename: 'pages/feb-4-poulami-second.html'
     }),
-
+    new HtmlWebpackPlugin({
+      template: "pages/march.html",
+      inject: true,
+      chunks: ['march-Mariya Harizanova'],
+      filename: 'pages/march.html'
+    }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",
@@ -153,7 +158,7 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [ "sass-loader"],
+        use: ["sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
