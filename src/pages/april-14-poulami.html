@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>April 14</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    .header-background {
+      background-color: black !important;
+    }
+    .font-color-white {
+      color: white !important;
+    }
+    .header-icon {
+      height: 25px;
+      width: 25px;
+    }
+    .nav-link-font {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .title {
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      color: white;
+      margin-top: 2rem;
+    }
+    .card-name {
+      background: #d9d9d9;
+      border-radius: 50px;
+      display: inline-block;
+      width: 40%;
+      padding: 6px;
+    }
+    .credit-card-img {
+      height: 26px;
+      width: 36px;
+      text-align: right;
+    }
+    .card-body-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .credit-card {
+      height: 10rem;
+      background: #76c893;
+      border-radius: 20px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .see-all {
+      color: #09952e;
+      font-size: 10px;
+    }
+    .transactions {
+      background: rgba(118, 200, 147, 0.08);
+      backdrop-filter: blur(2px);
+      border-radius: 40px;
+    }
+    .transactions p {
+      line-height: 0.5;
+      font-size: 20px;
+    }
+    .transaction-img {
+      width: 40px;
+      height: 40px;
+      margin-right: 1rem;
+    }
+    .transaction-details {
+      margin-bottom: 1rem;
+    }
+    .transaction-header {
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      body {
+        display: flex;
+        flex-direction: row;
+      }
+      .navbar .container-fluid,
+      .navbar-expand-lg .navbar-collapse,
+      .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+      }
+
+      .navbar {
+        width: 25%;
+        height: 100vh;
+        align-items: flex-start;
+      }
+      .navbar-brand {
+        margin: 1rem;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 30px;
+      }
+
+      .header-icon {
+        height: 40px;
+        width: 40px;
+      }
+
+      .nav-link-font {
+        font-size: 15px;
+      }
+
+      .nav-link-item {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .title {
+        margin-top: 6rem;
+        font-size: 25px;
+      }
+      .card {
+        width: 40%;
+      }
+
+      .card-body-details .card-name {
+        font-size: 1.5rem;
+      }
+
+      .credit-card {
+        height: 13rem;
+        background: #76c893;
+        border-radius: 20px;
+        margin-top: 4%;
+        margin-bottom: 4%;
+      }
+
+      .credit-card h6 {
+        font-size: 20px;
+      }
+      .credit-card-img {
+        height: 36px;
+        width: 46px;
+      }
+      .transactions {
+        width: 50%;
+      }
+
+      .transactions p {
+        font-size: 25px;
+      }
+      .transaction-details {
+        margin-top: 1rem;
+        padding: 1.5rem;
+      }
+
+      .transaction-details p {
+        font-size: 20px;
+      }
+
+      .transaction-img {
+        width: 50px;
+        height: 50px;
+        margin-right: 1.5rem;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary header-background">
+      <div class="container-fluid">
+        <a class="navbar-brand font-color-white" href="#">Hi, Luz</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img
+            src="../assets/poulami/transactions/header/door.png"
+            class="navbar-toggler-icon header-icon"
+          />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <div class="d-flex align-items-center nav-link-item">
+              <img
+                class="header-icon me-2 mb-2"
+                src="../assets/poulami/transactions/header/home.png"
+              />
+              <a
+                class="nav-link active font-color-white nav-link-font"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </div>
+            <div class="d-flex align-items-center nav-link-item">
+              <img
+                src="../assets/poulami/transactions/header/credit-card.png"
+                class="header-icon me-2 mb-2"
+              />
+              <a class="nav-link font-color-white nav-link-font" href="#"
+                >My Wallets</a
+              >
+            </div>
+            <div class="d-flex align-items-center nav-link-item">
+              <img
+                src="../assets/poulami/transactions/header/profile.png"
+                class="header-icon me-2 mb-2"
+              />
+              <a class="nav-link font-color-white nav-link-font" href="#"
+                >Profile</a
+              >
+            </div>
+            <div class="d-flex align-items-center nav-link-item">
+              <img
+                src="../assets/poulami/transactions/header/explore.png"
+                class="header-icon me-2 mb-2"
+              />
+              <a class="nav-link font-color-white nav-link-font" href="#"
+                >Explore</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container-fluid">
+      <h4 class="title">My BitTransactions</h4>
+      <div class="card credit-card">
+        <div class="card-body card-body-details">
+          <p class="card-name">bitWallet</p>
+          <div style="text-align: right">
+            <img
+              src="../assets/poulami/transactions/body/card.png"
+              class="credit-card-img"
+            />
+          </div>
+          <h6><b>$231, 000.00 USD</b></h6>
+          <h6>7.58BTC</h6>
+        </div>
+      </div>
+      <div class="transactions card">
+        <div
+          class="card-body"
+          style="background-color: black; border-radius: 25px"
+        >
+          <div
+            class="d-flex justify-content-between align-items-center transaction-header"
+          >
+            <p style="background-color: black; color: white">Transactions</p>
+            <p class="see-all"><u>See all</u></p>
+          </div>
+          <div
+            class="card-body d-flex flex-row align-items-center justify-content-between transaction-details"
+            style="background: #bcbbbb; border-radius: 25px"
+          >
+            <div class="d-flex align-items-center py-0.5">
+              <img
+                src="../assets/poulami/transactions/body/ellipse.png"
+                class="transaction-img"
+              />
+              <div class="d-flex flex-column mt-2">
+                <p><b>Poulami Saha</b></p>
+                <p>Monday</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column mt-2" style="text-align: right">
+              <p><b>$300 USD</b></p>
+              <p>0.0033BTC</p>
+            </div>
+          </div>
+
+          <div
+            class="card-body d-flex flex-row align-items-center justify-content-between transaction-details"
+            style="background: #76c893; border-radius: 25px"
+          >
+            <div class="d-flex align-items-center py-0.5">
+              <img
+                src="../assets/poulami/transactions/body/ellipse.png"
+                class="transaction-img"
+              />
+              <div class="d-flex flex-column mt-2">
+                <p><b>Poulami Saha</b></p>
+                <p>Monday</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column mt-2" style="text-align: right">
+              <p><b>$100 USD</b></p>
+              <p>0.0033BTC</p>
+            </div>
+          </div>
+
+          <div
+            class="card-body d-flex flex-row align-items-center justify-content-between mb-3 transaction-details"
+            style="background: #bcbbbb; border-radius: 25px"
+          >
+            <div class="d-flex align-items-center py-0.5">
+              <img
+                src="../assets/poulami/transactions/body/ellipse.png"
+                class="transaction-img"
+              />
+              <div class="d-flex flex-column mt-2">
+                <p><b>Poulami Saha</b></p>
+                <p>15/3</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column mt-2" style="text-align: right">
+              <p><b>$50 USD</b></p>
+              <p>0.0016BTC</p>
+            </div>
+          </div>
+
+          <div
+            class="card-body d-flex flex-row align-items-center justify-content-between mb-3 transaction-details"
+            style="background: #bcbbbb; border-radius: 25px"
+          >
+            <div class="d-flex align-items-center py-0.5">
+              <img
+                src="../assets/poulami/transactions/body/ellipse.png"
+                class="transaction-img"
+              />
+              <div class="d-flex flex-column mt-2">
+                <p><b>Poulami Saha</b></p>
+                <p>13/2</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column mt-2" style="text-align: right">
+              <p><b>$120 USD</b></p>
+              <p>0.0039BTC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
