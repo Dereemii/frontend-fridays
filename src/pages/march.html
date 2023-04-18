@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Front End Friday</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /*Demo purposes only*/
-        body {
-            padding: 0 20px;
-        }
-    </style>
+    <title>November 18th</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto&display=swap" rel="stylesheet">
+
 
     <style>
         a.wwcode-link {
@@ -675,92 +679,483 @@
             font-family: Arial, Helvetica, sans-serif
         }
     </style>
+
+    <style>
+        .light-green {
+            color: #8db48e !important;
+        }
+
+        .text-dark-green {
+            color: #4d724e;
+        }
+
+        html,
+        body {
+            background-image: linear-gradient(90deg, #8db48e 50%, white 50%);
+        }
+
+        div.scrollmenu {
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.scrollmenu a {
+
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+
+
+        .plate {
+            position: absolute;
+            width: 600px;
+            bottom: 0;
+        }
+
+        .plate-tommato {
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+
+        .plate-lemon {
+            width: 230px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        @media screen and (max-width: 680px) {
+
+            html,
+            body {
+                background-image: linear-gradient(90deg, white 50%, #8db48e 50%);
+                background-image: url(../assets/veggi.png);
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                bottom: 0;
+            }
+
+            nav {
+                background-color: #8db48e;
+            }
+
+            .plate {
+                display: none;
+            }
+
+            .plate-tommato {
+                display: none;
+            }
+
+
+
+            .plate-lemon {
+                display: none;
+            }
+
+            .font-b7 {
+                font-size: 0.7rem;
+            }
+
+            .font-b9 {
+                font-size: 0.9rem;
+            }
+
+            .font-xs {
+                font-size: 1rem;
+            }
+
+            .font-s {
+                font-size: 1.1rem;
+            }
+
+            .font-sm {
+                font-size: 1.2rem;
+            }
+
+            .font-smx {
+                font-size: 1.3rem;
+            }
+
+            .font-smd {
+                font-size: 1.4rem;
+            }
+
+            .font-lgsm {
+                font-size: 1.6rem;
+            }
+
+            .font-md {
+                font-size: 1.8rem;
+            }
+
+            .font-mmd {
+                font-size: 2.1rem;
+            }
+
+            .font-lmd {
+                font-size: 2.4rem;
+            }
+
+            .font-mmds {
+                font-size: 2.3rem;
+            }
+
+            .font-xlmd {
+                font-size: 2.8rem;
+            }
+
+            .font-xxlmd {
+                font-size: 3rem;
+            }
+
+            .font-slg {
+                font-size: 3.6rem;
+            }
+
+            .font-smlg {
+                font-size: 3.8rem;
+            }
+
+            .font-mlg {
+                font-size: 4rem;
+            }
+
+            .font-llg {
+                font-size: 4.6rem;
+            }
+
+            .font-lg {
+                font-size: 6rem;
+            }
+
+            .font-xlg {
+                font-size: 7.2rem;
+            }
+
+            .size-150 {
+                width: 150px;
+            }
+
+            .mx-lg-7 {
+                margin-left: 7rem !important;
+                margin-right: 7rem !important;
+            }
+
+            @media screen and (max-width: 1181px) {
+                .font-md {
+                    font-size: 1.7rem;
+                }
+
+                .font-mmd {
+                    font-size: 2rem;
+                }
+
+                .font-lmd {
+                    font-size: 2.3rem;
+                }
+
+                .font-xlmd {
+                    font-size: 2.2rem;
+                }
+
+                .font-xxlmd {
+                    font-size: 2.9rem;
+                }
+
+                .font-slg {
+                    font-size: 3.2rem;
+                }
+
+                .font-smlg {
+                    font-size: 3.5rem;
+                }
+
+                .font-mlg {
+                    font-size: 3.6rem;
+                }
+
+                .font-llg {
+                    font-size: 4.4rem;
+                }
+
+                .font-lg {
+                    font-size: 5.4rem;
+                }
+
+                .font-xlg {
+                    font-size: 6.6rem;
+                }
+
+                .font-md {
+                    font-size: 1.5rem;
+                }
+
+                .font-mmds {
+                    font-size: 1.8rem;
+                }
+
+                .font-b9 {
+                    font-size: 0.8rem;
+                }
+            }
+
+            @media screen and (max-width: 1024px) {
+                .font-slg {
+                    font-size: 3rem;
+                }
+
+                .font-smlg {
+                    font-size: 3.2rem;
+                }
+
+                .font-mlg {
+                    font-size: 3.3rem;
+                }
+
+                .font-llg {
+                    font-size: 4rem;
+                }
+
+                .font-lg {
+                    font-size: 5rem;
+                }
+
+                .font-xlg {
+                    font-size: 6rem;
+                }
+
+                .font-b9 {
+                    font-size: 0.8rem;
+                }
+            }
+
+            @media screen and (max-width: 820px) {
+                .font-xlmd {
+                    font-size: 2.4rem;
+                }
+
+                .font-b9 {
+                    font-size: 0.7rem;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .font-xlg {
+                    font-size: 5.6rem;
+                }
+            }
+
+            @media screen and (max-width: 640px) {
+                .font-b9 {
+                    font-size: 0.8rem;
+                }
+
+                .font-xs {
+                    font-size: 0.9rem;
+                }
+
+                .font-sm {
+                    font-size: 1.1rem;
+                }
+
+                .font-smx {
+                    font-size: 1.2rem;
+                }
+
+                .font-smd {
+                    font-size: 1.3rem;
+                }
+
+                .font-lgsm {
+                    font-size: 1.3rem;
+                }
+
+                .font-slg {
+                    font-size: 2.8rem;
+                }
+
+                .font-smlg {
+                    font-size: 2.9rem;
+                }
+
+                .font-mlg {
+                    font-size: 3rem;
+                }
+
+                .font-llg {
+                    font-size: 3.5rem;
+                }
+
+                .font-lg {
+                    font-size: 4.4rem;
+                }
+
+                .font-xlg {
+                    font-size: 5.4rem;
+                }
+
+                .font-md {
+                    font-size: 1.6rem;
+                }
+
+                .font-mmd {
+                    font-size: 1.7rem;
+                }
+
+                .font-lmd {
+                    font-size: 2rem;
+                }
+
+                .font-xlmd {
+                    font-size: 2.4rem;
+                }
+
+                .font-xxlmd {
+                    font-size: 2.6rem;
+                }
+
+                .font-mmds {
+                    font-size: 2rem;
+                }
+
+            }
+
+            @font-face {
+                font-family: 'Roboto-Black';
+                src: url('../fonts/Roboto-Black.eot');
+                src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+                    url('../fonts/Roboto-Black.woff2') format('woff2'),
+                    url('../fonts/Roboto-Black.woff') format('woff'),
+                    url('../fonts/Roboto-Black.ttf') format('truetype'),
+                    url('../fonts/Roboto-Black.svg#Roboto-Black') format('svg');
+                font-weight: 900;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Roboto-Bold';
+                src: url('../fonts/Roboto-Bold.eot');
+                src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+                    url('../fonts/Roboto-Bold.woff2') format('woff2'),
+                    url('../fonts/Roboto-Bold.woff') format('woff'),
+                    url('../fonts/Roboto-Bold.ttf') format('truetype'),
+                    url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Roboto-Regular';
+                src: url('../fonts/Roboto-Regular.eot');
+                src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+                    url('../fonts/Roboto-Regular.woff2') format('woff2'),
+                    url('../fonts/Roboto-Regular.woff') format('woff'),
+                    url('../fonts/Roboto-Regular.ttf') format('truetype'),
+                    url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            .roboto-regular {
+                font-family: 'Roboto-Regular';
+            }
+
+            .roboto-bold {
+                font-family: 'Roboto-Bold';
+            }
+
+            .roboto-black {
+                font-family: 'Roboto-Black';
+            }
+        }
+    </style>
+
+
+
 </head>
 
-<body class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold my-3.5">Welcome to our Front End Fridays Repository!</h1>
-    <section>
-
-        <div class="columns-12 flex flex-col">
-            <div class="mb-4">
-                <p class="font-bold text-xl">November</p>
-                <ul>
-                    <li><a href="pages/november18.html" class="wwcode-link">Nov 18th - 2022 </a></li>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-lg-5 px-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../assets/logo-recipe.png"></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active px-lg-5 px-0 text-white roboto-bold " aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-lg-5 px-0 text-white roboto-bold " aria-current="page"
+                            href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link light-green roboto-bold px-lg-5 px-0" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link light-green roboto-bold px-lg-5 px-0">Contact</a>
+                    </li>
                 </ul>
+                <form class="d-flex px-3" role="search">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <button class="btn" type="submit"><img class="w-75" src="../assets/search.png"></button>
+                </form>
             </div>
-
-
-            <div>
-                <p class="font-bold text-xl">December</p>
-                <ul>
-                    <li><a href="pages/dec2.html" class="wwcode-link">Card-Timer by Poulami Saha</a></li>
-                    <li><a href="pages/dec9.html" class="wwcode-link">Boading pass by Mariya Harizanova</a></li>
-                    <li><a href="pages/dec13.html" class="wwcode-link">Card-Timer by Mariya Harizanova</a></li>
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">January</p>
-                <ul>
-                    <li><a href="pages/january6.html" class="wwcode-link">Info Cards by Mariya Harizanova</a></li>
-                    <li><a href="pages/january18.html" class="wwcode-link">Info Card by Mariya Harizanova</a></li>
-                    <li><a href="pages/january-wallet.html" class="wwcode-link">Wallet by Mariya Harizanova</a></li>
-
-                    <li><a href="pages/jan6.html" class="wwcode-link">Banners by Poulami Saha</a></li>
-                    <li><a href="pages/jan6-luz.html" class="wwcode-link">Notifications by Luz De Leon</a></li>
-                    <li><a href="pages/jan13-poulami.html" class="wwcode-link">Profile by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <div class="pt-4">
-                <p class="font-bold text-xl">February </p>
-                <ul>
-
-                    <li><a href="pages/calculator.html" class="wwcode-link">Calculator By Mariya Harizanova</a></li>
-
-                    <li><a href="pages/jan13-poulami.html" class="wwcode-link">Profile by Poulami Saha</a></li>
-                    <li><a href="pages/jan27-poulami.html" class="wwcode-link">Digital Wallet by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">February</p>
-                <ul>
-                    <li><a href="pages/feb-4-poulami.html" class="wwcode-link">Digital Wallet With Adding New Card
-                            functionality by Poulami Saha</a></li>
-
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">March</p>
-                <ul>
-                    <li><a href="pages/march.html" class="wwcode-link">Recipe page by Mariya Harizanova
-                        </a></li>
-
-                </ul>
-            </div>
-            <div>
-                <p class="font-bold text-xl">March</p>
-                <ul>
-                    <li><a href="pages/mar-17-poulami.html" class="wwcode-link">E-Commerce Site by Poulami Saha</a></li>
-                    <li><a href="pages/mar-24-poulami.html" class="wwcode-link">Wellness App by Poulami Saha</a></li>
-                    <li><a href="pages/march-31-poulami.html" class="wwcode-link">WWC-Design by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <div class="pb-5">
-                <p class="font-bold text-xl">April</p>
-                <ul>
-                    <li><a href="pages/april.html" class="wwcode-link">Women Who Code
-                            News by Mariya Harizanova</a></li>
-                </ul>
-                <ul>
-                    <li><a href="pages/april-15.html" class="wwcode-link">BitTransactions app by Mariya Harizanova</a></li>
-                </ul>
-            </div>
-         
         </div>
+    </nav>
+    <div class="container-fluid  d-flex justify-content-center">
+        <div class="row py-5 my-5">
+            <div class="col-lg-3 col-12 pt-lg-0 pt-md-0 pt-5">
+                <h1 class="text-dark-green robotto-bold">Salmon Salad
+                </h1>
+                <p class="text-dark-green robotto-regular font-xs">This salmon salad makes a main dish salad with
+                    chopped
+                    vegetables, flaky fish, and tangy citrus dressing.
+                    It has plenty
+                    of protein and healthy fats, so it’s nutritious and delicious!
+                </p>
+                <img class="plate-tommato" src="../assets/tomato plate.png">
+            </div>
+            <div class="col-lg-6 col-12  px-lg-5">
+                <h1 class="text-dark-green robotto-bold">Salmon Salad
+                </h1>
+                <p class="text-dark-green robotto-regular font-xs">This salmon salad makes a main dish salad with
+                    chopped<br>
+                    vegetables, flaky fish, and tangy citrus dressing.
+                    It has plenty
+                    of<br> protein and healthy fats, so it’s nutritious and delicious!
+                </p>
+                <div class=>
+                    <img class="plate" src="../assets/plate.png">
+                </div>
+            </div>
+            <div class="col-lg-3 col-12">
+                <h1 class="text-dark-green robotto-bold">Beef steak
+                </h1>
+                <p class="text-dark-green robotto-regular font-xs">This beef steak is a very easy recipe to make. A
+                    tender cut of beef is sliced thin, then marinated with lemon juice and
+                    soy sauce for at least an hour.
+                </p>
+                <img class="plate-lemon" src="../assets/lemon-plate.png">
+            </div>
+        </div>
+    </div>
 
-    </section>
+
 </body>
 
 </html>
