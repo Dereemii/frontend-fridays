@@ -66,20 +66,20 @@ const config = {
       chunks: ['january18'],
       filename: 'pages/january18.html'
     }),
-     new HtmlWebpackPlugin({
-       template: 'pages/january-wallet.html',
-       inject: true,
-       chunks: ['january-wallet'],
-       filename: 'pages/january-wallet.html'
-     }),
+    new HtmlWebpackPlugin({
+      template: 'pages/january-wallet.html',
+      inject: true,
+      chunks: ['january-wallet'],
+      filename: 'pages/january-wallet.html'
+    }),
 
-         new HtmlWebpackPlugin({
-           template: 'pages/wallet-card.html',
-           inject: true,
-           chunks: ['wallet-card'],
-           filename: 'pages/wallet-card.html'
-         }),
-     new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
+      template: 'pages/wallet-card.html',
+      inject: true,
+      chunks: ['wallet-card'],
+      filename: 'pages/wallet-card.html'
+    }),
+    new HtmlWebpackPlugin({
       template: "pages/jan6.html",
       inject: true,
       chunks: ['jan6'],
@@ -97,6 +97,14 @@ const config = {
       chunks: ['jan13-poulami'],
       filename: 'pages/jan13-poulami.html'
     }),
+
+    new HtmlWebpackPlugin({
+      template: "pages/calculator.html",
+      inject: true,
+      chunks: ['calculator'],
+      filename: 'pages/calculator.html'
+    }),
+
     new HtmlWebpackPlugin({
       template: "pages/jan27-poulami.html",
       inject: true,
@@ -122,6 +130,12 @@ const config = {
       filename: 'pages/feb-4-poulami-second.html'
     }),
     new HtmlWebpackPlugin({
+      template: "pages/march.html",
+      inject: true,
+      chunks: ['march-Mariya Harizanova'],
+      filename: 'pages/march.html'
+    }),
+    new HtmlWebpackPlugin({
       template: "pages/mar-17-poulami.html",
       inject: true,
       chunks: ['mar-17-poulami'],
@@ -134,6 +148,18 @@ const config = {
       filename: 'pages/mar-24-poulami.html'
     }),
     new HtmlWebpackPlugin({
+      template: "pages/april.html",
+      inject: true,
+      chunks: ['mariya-harizanova'],
+      filename: 'pages/april.html'
+    }),
+     new HtmlWebpackPlugin({
+       template: "pages/april-15.html",
+       inject: true,
+       chunks: ['mariya-harizanova'],
+       filename: 'pages/april-15.html'
+     }),
+       new HtmlWebpackPlugin({
       template: "pages/march-31-poulami.html",
       inject: true,
       chunks: ['march-31-poulami'],
@@ -162,7 +188,7 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [ "sass-loader"],
+        use: ["sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,

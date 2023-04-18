@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Front End Friday</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /*Demo purposes only*/
-        body {
-            padding: 0 20px;
-        }
-    </style>
+    <title>November 18th</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto&display=swap" rel="stylesheet">
+
 
     <style>
         a.wwcode-link {
@@ -675,92 +679,295 @@
             font-family: Arial, Helvetica, sans-serif
         }
     </style>
+
+    <style>
+        .sidenav {
+            /* height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0; */
+            background-color: #111;
+            padding-top: 20px;
+            height: 100%;
+
+        }
+
+        .img-icon-one {
+            width: 20px;
+            height: 20px;
+            margin-left: 5rem;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        .img-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .img-icon-explore {
+            width: 35px;
+            height: 35px;
+        }
+
+
+        .img-icon-one {}
+
+        .bg-color {
+            background-color: #1E1E1E;
+        }
+
+        .bg-light-grey {
+            background-color: #D9D9D9;
+        }
+
+        .font-size {
+            font-size: 1.3rem;
+        }
+
+        .bg-green {
+            background-color: #09952E;
+        }
+
+        .text-green {
+            color: #09952E;
+            float: right;
+        }
+
+        .bg-grey {
+            background-color: #D9D9D9;
+        }
+
+        .bg-light-green {
+            background-color: #76C893;
+        }
+
+        .bow {
+            background-color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .float {
+            float: right;
+        }
+
+        .font-size-small {
+            font-size: 1rem;
+        }
+
+        .card {
+            width: 50px;
+            float: right
+        }
+
+        .margin-top-new {
+
+            height: 15em;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .bg-box-new {
+
+            background-color: #333333;
+        }
+
+        .margin-top {
+            height: 10em;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .dark-green {
+            background-color: #282e2a;
+        }
+
+        .border-radius {
+            border-radius: 2rem;
+        }
+
+        body {
+            background-color: #1E1E1E;
+        }
+
+        @media screen and (max-height: 680px) {
+
+            .sidenav {
+                text-align: center;
+            }
+
+            .img-icon-one {
+                width: 20px;
+                height: 20px;
+                margin-left: 8rem;
+            }
+
+            .img-icon-one {}
+
+            .sidenav {
+                padding-top: 0px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+            .margin-top-new {
+
+                position: absolute;
+                /* 2 */
+                top: 0% !important;
+            }
+
+            .margin-top {
+                margin-top: 0;
+            }
+        }
+    </style>
+
+
+
 </head>
 
-<body class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold my-3.5">Welcome to our Front End Fridays Repository!</h1>
-    <section>
+<body>
+    <div id="nav" class="container-fluid  bg-color">
+        <div class="row ">
+            <div id="nav" class="col-lg-2 col-12 p-0 m-0">
+                <div class="sidenav p-3">
+                    <div class="d-flex justify-content space-between py-2">
+                        <p class="text-white">Hi, Liz </p><img class="img-icon-one" src="../assets/mariya/Mask group (1).png">
+                    </div>
+                    <div class="d-flex py-2">
+                        <img class="img-icon" src="../assets/mariya/home icon.png"><a href="#about">Home</a>
+                    </div>
+                    <div class="d-flex py-2">
+                        <img class="img-icon" src="../assets/mariya/credit card icon.png"><a href="#services">My Wallets</a>
+                    </div>
+                    <div class="d-flex py-2">
+                        <img class="img-icon" src="../assets/mariya/Mask group.png"> <a href="#clients">Profile</a>
+                    </div>
+                    <div class="d-flex py-2">
+                        <img class="img-icon-explore" src="../assets/mariya/tile icon.png"><a href="#contact">Explore</a>
+                    </div>
+                </div>
 
-        <div class="columns-12 flex flex-col">
-            <div class="mb-4">
-                <p class="font-bold text-xl">November</p>
-                <ul>
-                    <li><a href="pages/november18.html" class="wwcode-link">Nov 18th - 2022 </a></li>
-                </ul>
             </div>
 
-
-            <div>
-                <p class="font-bold text-xl">December</p>
-                <ul>
-                    <li><a href="pages/dec2.html" class="wwcode-link">Card-Timer by Poulami Saha</a></li>
-                    <li><a href="pages/dec9.html" class="wwcode-link">Boading pass by Mariya Harizanova</a></li>
-                    <li><a href="pages/dec13.html" class="wwcode-link">Card-Timer by Mariya Harizanova</a></li>
-                </ul>
+            <div class="col-lg-9 px-lg-5 pt-5 mx-auto xol-12">
+                <div class="">
+                    <div class="row">
+                        <h3 class="text-white">My BitTransactions</h3>
+                        <div class="col-lg-4 col-md-6  bg-green border-radius mt-3">
+                            <div class="bg-light-grey  border-radius px-3 w-50 mt-3">
+                                <p class="font-size">bitWallet</p>
+                            </div>
+                            <div>
+                                <img class="card" src="../assets/mariya/card.png">
+                            </div>
+                            <div class="pt-3">
+                                <p class="font-size-small"><strong class="font-size-small mb-0">$231, 000.00
+                                        USD</strong><br>7.58BTC</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 bg-box-new border-radius mt-3 mx-auto">
+                            <p class="text-white text-center margin-top">Creative area here!</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex py-5">
+                        <div class="col-lg-7 dark-green border-radius py-3">
+                            <p class="text-white">Transactions<a
+                                    class="text-green font-size text-decoration-underline">See
+                                    All</a></p>
+                            <div class="row bg-grey border-radius m-1 py-1">
+                                <div class="col-6 d-flex">
+                                    <span class="bow mt-1"></span>
+                                    <p class=" font-size-small px-4"><strong>Poulami Saha</strong><br>Monday </p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="float font-size-small"><strong>$300 USD</strong><br>
+                                        0.0033BTC</p>
+                                </div>
+                            </div>
+                            <div class="row bg-light-green border-radius m-1 py-1">
+                                <div class="col-6 d-flex">
+                                    <span class="bow mt-1"></span>
+                                    <p class=" font-size-small px-4"><strong>Poulami Saha</strong><br>Monday </p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="float font-size-small"><strong>$100 USD</strong><br>
+                                        0.0033BTC</p>
+                                </div>
+                            </div>
+                            <div class="row bg-grey border-radius m-1 py-1">
+                                <div class="col-6 d-flex">
+                                    <span class="bow mt-1"></span>
+                                    <p class=" font-size-small px-4"><strong>Poulami Saha</strong><br>15/3 </p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="float font-size-small"><strong>$50 USD</strong><br>
+                                        0.0033BTC</p>
+                                </div>
+                            </div>
+                            <div class="row bg-grey border-radius m-1 py-1">
+                                <div class="col-6 d-flex">
+                                    <span class="bow mt-1"></span>
+                                    <p class=" font-size-small px-4"><strong>Poulami Saha</strong><br>13/2 </p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="float font-size-small"><strong>$120 USD</strong><br>
+                                        0.0033BTC</p>
+                                </div>
+                            </div>
+                            <div class="row bg-grey border-radius m-1 py-1">
+                                <div class="col-6 d-flex">
+                                    <span class="bow mt-1"></span>
+                                    <p class=" font-size-small px-4"><strong>Poulami Saha</strong><br>13/2</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="float font-size-small"><strong>$200 USD</strong><br>
+                                        0.0033BTC</p>
+                                </div>
+                            </div>
+                            <div class="font-size-small text-white  bg-grey border-radius">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 bg-box-new border-radius p-5 mx-auto">
+                            <p class="text-white font-size margin-top-new ">Creative area here!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">January</p>
-                <ul>
-                    <li><a href="pages/january6.html" class="wwcode-link">Info Cards by Mariya Harizanova</a></li>
-                    <li><a href="pages/january18.html" class="wwcode-link">Info Card by Mariya Harizanova</a></li>
-                    <li><a href="pages/january-wallet.html" class="wwcode-link">Wallet by Mariya Harizanova</a></li>
-
-                    <li><a href="pages/jan6.html" class="wwcode-link">Banners by Poulami Saha</a></li>
-                    <li><a href="pages/jan6-luz.html" class="wwcode-link">Notifications by Luz De Leon</a></li>
-                    <li><a href="pages/jan13-poulami.html" class="wwcode-link">Profile by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <div class="pt-4">
-                <p class="font-bold text-xl">February </p>
-                <ul>
-
-                    <li><a href="pages/calculator.html" class="wwcode-link">Calculator By Mariya Harizanova</a></li>
-
-                    <li><a href="pages/jan13-poulami.html" class="wwcode-link">Profile by Poulami Saha</a></li>
-                    <li><a href="pages/jan27-poulami.html" class="wwcode-link">Digital Wallet by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">February</p>
-                <ul>
-                    <li><a href="pages/feb-4-poulami.html" class="wwcode-link">Digital Wallet With Adding New Card
-                            functionality by Poulami Saha</a></li>
-
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">March</p>
-                <ul>
-                    <li><a href="pages/march.html" class="wwcode-link">Recipe page by Mariya Harizanova
-                        </a></li>
-
-                </ul>
-            </div>
-            <div>
-                <p class="font-bold text-xl">March</p>
-                <ul>
-                    <li><a href="pages/mar-17-poulami.html" class="wwcode-link">E-Commerce Site by Poulami Saha</a></li>
-                    <li><a href="pages/mar-24-poulami.html" class="wwcode-link">Wellness App by Poulami Saha</a></li>
-                    <li><a href="pages/march-31-poulami.html" class="wwcode-link">WWC-Design by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <div class="pb-5">
-                <p class="font-bold text-xl">April</p>
-                <ul>
-                    <li><a href="pages/april.html" class="wwcode-link">Women Who Code
-                            News by Mariya Harizanova</a></li>
-                </ul>
-                <ul>
-                    <li><a href="pages/april-15.html" class="wwcode-link">BitTransactions app by Mariya Harizanova</a></li>
-                </ul>
-            </div>
-         
         </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
 
-    </section>
+
 </body>
 
 </html>
