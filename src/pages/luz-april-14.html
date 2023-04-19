@@ -10,19 +10,93 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 
     <title>my bitwallet</title>
+
+    <style>
+        #credit-card {
+            background: #C1EC48;
+        }
+    </style>
 </head>
 <body>
     <ion-app>
-        <ion-header>
+        <ion-header class="ion-hide-md-down">
             <ion-toolbar>Hola?</ion-toolbar>
         </ion-header>
         <ion-content>
-            <ion-grid>
-                <ion-row size-md="4" size="12">
-                    hola?
-                </ion-row>
-            </ion-grid>
+            <h1>My bit transactions</h1>
+            <aside id="sidebar ion-hide-md-down">
+                <!--Sidebar? -->
+            </aside>
+            <main id="main-content">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="12" size-md="4" size-offset-md="1">
+                            <div id="credit-card">
+                                <div class="card-title"></div>
+
+                                <div class="card-amounts">
+                                    <span class="usd">$231, 000.00 USD</span>
+                                    <span class="btc">7.58BTC</span>
+                                </div>
+
+                                <div class="chip">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </ion-col>
+                        <ion-col size="12" size-md="7">
+                            <!--Creative content here-->
+                        </ion-col>
+                        <ion-col size="12" size-md="8">
+                            <ion-card>
+                                <ion-card-title>
+                                    <span>Transactions</span>
+                                    <a href="#" class="">See all</a>
+                                </ion-card-title>
+                                <ion-card-content>
+                                    <div class="transaction">
+                                        <div class="avatar">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="user-date">
+                                            <span class="user">Poulami Saha</span>
+                                            <span class="date">Date here TBD</span>
+                                        </div>
+                                        <div class="description">
+                                            <span>$300USD</span>
+                                            <span>0.0033BTC</span>
+                                        </div>
+                                    </div>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                        <ion-col size="12" size-md="4">
+                            <!--Other creative area here-->
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </main>
+           
         </ion-content>
+
+        <ion-tabs>
+            <ion-tab-bar slot="bottom">
+              <ion-tab-button tab="home">
+                <ion-icon name="home"></ion-icon>
+                
+              </ion-tab-button>
+              <ion-tab-button tab="wallet">
+                <ion-icon name="card"></ion-icon>
+                
+              </ion-tab-button>
+              <ion-tab-button tab="profile">
+                <ion-icon name="person-circle"></ion-icon>
+              </ion-tab-button>
+              <ion-tab-button tab="home">
+                <ion-icon name="grid"></ion-icon>
+              </ion-tab-button>
+            </ion-tab-bar>
+          </ion-tabs>
 
     </ion-app>
     
