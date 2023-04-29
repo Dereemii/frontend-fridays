@@ -177,6 +177,12 @@ const config = {
       chunks: ['april-14-poulami'],
       filename: 'pages/april-14-poulami.html'
     }),
+    new HtmlWebpackPlugin({
+      template: "pages/luz-april-21.html",
+      inject: true,
+      chunks: ['luz-april-21'],
+      filename: 'pages/luz-april-21.html'
+    }),
       new HtmlWebpackPlugin({
       template: "pages/april-21-poulami.html",
       inject: true,
