@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    
+    <title>My File Uploader</title>
+    
+    <style>
+        
+        /*root styles*/
+        :root{
+            --ion-background-color: #871074;
+            --ion-text-color: #FFF;
+            
+            
+            /*local variables*/
+            --lime-green: #B6F406;
+            --dark-gray: #333333;
+            --light-gray: #D9D9D9;
+            --slate-gray: #B6B7B6;
+            --error-light: #FFBEAA;
+            --error: #871010;
+            --teal: #871010;
+            --white : #FFF;
+            
+        }
+        
+        
+        ion-tabs ion-tab-button ion-icon {
+            color: #FFF;
+        }
+        ion-tabs ion-tab-button.active ion-icon {
+            color: var(--lucky-green);
+        }
+        
+        ion-chip {
+            background: var(--smoke-gray);
+            font-size: 20px;
+            padding-inline: 20px;
+        }
+        
+        ion-avatar {
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        ion-card {
+            background: var(--white);
+            box-shadow: none;
+            border: solid 4px #000;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        
+        ion-card ion-card-title, 
+        ion-card ion-card-content {
+            
+        }
+        
+        ion-card.error {
+            background-color: var(--error-light);      
+        }
+
+        .drag-area {
+            border: dashed 4px black;
+            background-color: var(--lime-green);
+            padding: 20px;
+            border-radius: 20px;
+            color: #000;
+            text-align: center;
+        }
+
+        .drag-area:hover {
+            cursor: pointer;
+            background-color: var(--light-gray);
+        }
+        .drag-area h3 {
+            font-weight: 700;
+            font-size: 22px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <ion-app>
+        <ion-content>
+            <ion-grid id="uploader-section">
+                <ion-row id="uploader">
+                    <ion-col size="12" offset-md="3" size-md="6">
+                        <ion-card>
+                            <ion-card-title>
+                                Upload a file
+                            </ion-card-title>
+                            <ion-card-content>
+                                <div class="drag-area">
+                                    <h3>Drag & Drop files here</h3>
+                                    <h4>50MB max file size</h4>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12" offset-md="3" size-md="6">
+                        <ion-card>Uploaded document 1</ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12" offset-md="3" size-md="6">
+                        <ion-card>Uploaded document 2</ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12" offset-md="3" size-md="6">
+                        <ion-card>Uploaded document 3</ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12" offset-md="3" size-md="6">
+                        <ion-card class="error">Error here</ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+    
+</body>
+
+</html>
