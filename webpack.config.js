@@ -169,7 +169,7 @@ const config = {
       template: "pages/luz-april-14.html",
       inject: true,
       chunks: ['luz-april-14'],
-      filename: 'pages/mluz-april-14.html'
+      filename: 'pages/luz-april-14.html'
     }),
       new HtmlWebpackPlugin({
       template: "pages/april-14-poulami.html",
