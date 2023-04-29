@@ -4,10 +4,387 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    
     <title>my bitwallet</title>
+    
+    <style>
+        
+        /*root styles*/
+        :root{
+            --ion-background-color: #212121;
+            --ion-text-color: #FFF;
+            
+            
+            /*local variables*/
+            --lucky-green: #1F9F43;
+            --dark-gray: #333333;
+            --light-gray: #B6B7B6;
+            --mud-green: #282E2A;
+            --slate-gray: #B6B7B6;
+            --verdigreen: #699479;
+            --smoke-gray: #D9D9D9;
+        }
+        
+        ion-tabs {
+            --ion-background-color: #000;
+        }
+
+
+        ion-tabs ion-tab-button ion-icon {
+            color: #FFF;
+        }
+        ion-tabs ion-tab-button.active ion-icon {
+            color: var(--lucky-green);
+        }
+
+        ion-chip {
+            background: var(--smoke-gray);
+            font-size: 20px;
+            padding-inline: 20px;
+        }
+        
+        ion-avatar {
+            width: 40px;
+            height: 40px;
+        }
+        
+        
+        ion-card {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        ion-card ion-card-title, 
+        ion-card ion-card-content {
+            color: #FFF;
+        }
+
+        ion-card ion-card-title {
+            padding: 10px;
+        }
+        
+        #credit-card {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            background: var(--lucky-green);
+            min-height: 250px;
+            border-radius: 20px;
+            padding: 19px;
+        }
+        
+        #credit-card .chip {
+            align-self: flex-end;
+        }
+        
+        #credit-card .card-amounts {
+            display:flex;
+            flex-flow: column;
+        }
+        
+        #credit-card .card-amounts .usd, 
+        #credit-card .card-amounts .btc {
+            color : #000;
+        }
+        #credit-card .card-amounts .usd {
+            font-size: 20px;
+        }
+        
+        #credit-card .card-amounts .btc{
+            font-size: 16px;
+        }
+        
+        #sidebar {
+            background-color: #000;
+            
+        }
+
+        #sidebar ion-list ion-item {
+            font-size: 24px;
+        }
+        #sidebar ion-list ion-item ion-icon{
+            color:#FFF;
+            margin-right: 15px;
+        }
+        #sidebar ion-list ion-item.active ion-icon{
+            color: var(--lucky-green);
+        }
+        #sidebar .active ion-icon {
+            --color: var(--lucky-green);
+        }
+        
+        .dark-blank {
+            background-color: var(--dark-gray) ;
+            border-radius: 40px;
+        }
+
+        #bitcoinMkt {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #transactions .transaction {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 20px;
+            background-color: var(--slate-gray);
+            color: #000;
+            margin-top: 17px;
+            margin-bottom: 17px;
+            padding: 10px;
+        }
+        
+        #transactions .transaction.highlight {
+            background-color: var(--verdigreen);
+        }
+        
+        #transactions .transaction .avatar {
+            flex: 0 0 40px;
+        }
+        #transactions .transaction .description{
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+        
+        #transactions .transaction .user-date {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 17px;
+        }
+        
+        #transactions ion-card {
+            padding: 20px;
+            background: var(--mud-green);
+        }
+        #transactions ion-card{
+            border-radius: 40px;
+        }
+        
+        #transactions ion-card-title {
+            display: flex;
+            color: #fff;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        #transactions a {
+            color: var(--lucky-green);
+            
+        }
+        
+        
+        #transactions .transaction .user-date .user {
+            font-weight: 700;
+        }
+        
+        #transactions .transaction .user-date .date {
+            
+        }
+        
+        .usd {
+            font-weight: 700;
+        }
+        
+        .usd, .btc {
+            text-transform: uppercase;
+        }
+        
+        
+        
+    </style>
 </head>
 <body>
+    <ion-split-pane content-id="main">
+        <ion-menu content-id="main">
+            <ion-header>
+                <ion-toolbar class="title">
+                    <ion-title>
+                        Hi, Luz
+                        <ion-icon name="log-out"></ion-icon>
+                    </ion-title>
+                </ion-toolbar>
+            </ion-header>
+                <ion-content id="sidebar">
+                    <ion-list >
+                        <ion-item>
+                            <ion-icon name="home"></ion-icon>
+                            <ion-label>Home</ion-label>
+                        </ion-item>
+                        <ion-item class="active">
+                            <ion-icon name="card"></ion-icon>
+                            <ion-label>My wallets</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon name="person-circle"></ion-icon>
+                            <ion-label>Profile</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon name="grid"></ion-icon>
+                            <ion-label>Explore</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+        </ion-menu>
+        <ion-content id="main">
+            <main id="main-content">
+                            
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="12">
+                            <h1>My BitTransactions</h1>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        
+                        <ion-col size="12" size-md="4" size-offset-md="1">
+                            
+                            <div id="credit-card">
+                                <div class="card-title">
+                                    <ion-chip>bitWallet</ion-chip>
+                                </div>
+                                
+                                <div class="chip">
+                                    <img src="../assets/luz/chip.svg" alt="Chip" width="60px" height="60px">
+                                </div>
+                                
+                                <div class="card-amounts">
+                                    <span class="usd">$231, 000.00 USD</span>
+                                    <span class="btc">7.58BTC</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </ion-col>
+                        <ion-col size="12" size-md="8" class="dark-blank ion-hide-md-down">
+                            <ion-card>
+                                <ion-card-title>Your Activity</ion-card-title>
+                                <ion-card-content>
+                                    Hola
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                       
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12" size-md="8" id="transactions">
+                            <ion-card>
+                                <ion-card-title>
+                                    <span>Transactions</span>
+                                    <a href="#" class="">See all</a>
+                                </ion-card-title>
+                                <ion-card-content>
+                                    <div class="transaction">
+                                        <div class="avatar">
+                                            <ion-avatar>
+                                                <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="">
+                                            </ion-avatar>
+                                        </div>
+                                        <div class="user-date">
+                                            <span class="user">Poulami Saha</span>
+                                            <span class="date">Date here TBD</span>
+                                        </div>
+                                        <div class="description">
+                                            <span class="usd">$300USD</span>
+                                            <span class="btc">0.0033BTC</span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction">
+                                        <div class="avatar">
+                                            <ion-avatar>
+                                                <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="">
+                                            </ion-avatar>
+                                        </div>
+                                        <div class="user-date">
+                                            <span class="user">Poulami Saha</span>
+                                            <span class="date">Date here TBD</span>
+                                        </div>
+                                        <div class="description">
+                                            <span class="usd">$300USD</span>
+                                            <span class="btc">0.0033BTC</span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction highlight">
+                                        <div class="avatar">
+                                            <ion-avatar>
+                                                <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="">
+                                            </ion-avatar>
+                                        </div>
+                                        <div class="user-date">
+                                            <span class="user">Poulami Saha</span>
+                                            <span class="date">Date here TBD</span>
+                                        </div>
+                                        <div class="description">
+                                            <span class="usd">$300USD</span>
+                                            <span class="btc">0.0033BTC</span>
+                                        </div>
+                                    </div>
+                                    <div class="transaction">
+                                        <div class="avatar">
+                                            <ion-avatar>
+                                                <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="">
+                                            </ion-avatar>
+                                        </div>
+                                        <div class="user-date">
+                                            <span class="user">Poulami Saha</span>
+                                            <span class="date">Date here TBD</span>
+                                        </div>
+                                        <div class="description">
+                                            <span class="usd">$300USD</span>
+                                            <span class="btc">0.0033BTC</span>
+                                        </div>
+                                    </div>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                        <ion-col size="12" size-md="4"  class="dark-blank ion-hide-md-down" id="bitcoinMkt" >
+                            <ion-card>
+                               <ion-card-title>BitCoin Market Summary</ion-card-title>
+                               <ion-card-content>hello</ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row  class="ion-hide-md-up">
+                        <ion-col>
+                           
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                
+            </main>
+            
+            <ion-tabs class ="ion-hide-md-up">
+                <ion-tab-bar slot="bottom">
+                    <ion-tab-button>
+                        <ion-icon name="home"></ion-icon>
+                        
+                    </ion-tab-button>
+                    <ion-tab-button class="active">
+                        <ion-icon name="card"></ion-icon>
+                        
+                    </ion-tab-button>
+                    <ion-tab-button>
+                        <ion-icon name="person-circle"></ion-icon>
+                    </ion-tab-button>
+                    <ion-tab-button>
+                        <ion-icon name="grid"></ion-icon>
+                    </ion-tab-button>
+                </ion-tab-bar>
+            </ion-tabs>
+        </ion-content>
+       
+    </ion-split-pane>
+
     
     
 </body>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
 </html>
