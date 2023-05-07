@@ -165,6 +165,12 @@ const config = {
       chunks: ['march-31-poulami'],
       filename: 'pages/march-31-poulami.html'
     }),
+     new HtmlWebpackPlugin({
+       template: "pages/may-file-upload-mariya.html",
+       inject: true,
+       chunks: ['mariya-harizanova'],
+       filename: 'pages/may-file-upload-mariya.html'
+     }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",
