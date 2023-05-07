@@ -171,6 +171,32 @@ const config = {
        chunks: ['mariya-harizanova'],
        filename: 'pages/may-file-upload-mariya.html'
      }),
+
+    new HtmlWebpackPlugin({
+      template: "pages/luz-april-14.html",
+      inject: true,
+      chunks: ['luz-april-14'],
+      filename: 'pages/luz-april-14.html'
+    }),
+      new HtmlWebpackPlugin({
+      template: "pages/april-14-poulami.html",
+      inject: true,
+      chunks: ['april-14-poulami'],
+      filename: 'pages/april-14-poulami.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "pages/luz-april-21.html",
+      inject: true,
+      chunks: ['luz-april-21'],
+      filename: 'pages/luz-april-21.html'
+    }),
+      new HtmlWebpackPlugin({
+      template: "pages/april-21-poulami.html",
+      inject: true,
+      chunks: ['april-21-poulami'],
+      filename: 'pages/april-21-poulami.html'
+    }),
+
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",
