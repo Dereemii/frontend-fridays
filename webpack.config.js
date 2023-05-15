@@ -153,24 +153,24 @@ const config = {
       chunks: ['mariya-harizanova'],
       filename: 'pages/april.html'
     }),
-     new HtmlWebpackPlugin({
-       template: "pages/april-15.html",
-       inject: true,
-       chunks: ['mariya-harizanova'],
-       filename: 'pages/april-15.html'
-     }),
-       new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
+      template: "pages/april-15.html",
+      inject: true,
+      chunks: ['mariya-harizanova'],
+      filename: 'pages/april-15.html'
+    }),
+    new HtmlWebpackPlugin({
       template: "pages/march-31-poulami.html",
       inject: true,
       chunks: ['march-31-poulami'],
       filename: 'pages/march-31-poulami.html'
     }),
-     new HtmlWebpackPlugin({
-       template: "pages/may-file-upload-mariya.html",
-       inject: true,
-       chunks: ['mariya-harizanova'],
-       filename: 'pages/may-file-upload-mariya.html'
-     }),
+    new HtmlWebpackPlugin({
+      template: "pages/may-file-upload-mariya.html",
+      inject: true,
+      chunks: ['mariya-harizanova'],
+      filename: 'pages/may-file-upload-mariya.html'
+    }),
 
     new HtmlWebpackPlugin({
       template: "pages/luz-april-14.html",
@@ -178,7 +178,7 @@ const config = {
       chunks: ['luz-april-14'],
       filename: 'pages/luz-april-14.html'
     }),
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "pages/april-14-poulami.html",
       inject: true,
       chunks: ['april-14-poulami'],
@@ -190,13 +190,18 @@ const config = {
       chunks: ['luz-april-21'],
       filename: 'pages/luz-april-21.html'
     }),
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "pages/april-21-poulami.html",
       inject: true,
       chunks: ['april-21-poulami'],
       filename: 'pages/april-21-poulami.html'
     }),
-
+    new HtmlWebpackPlugin({
+      template: "pages/my_coding_partner.html",
+      inject: true,
+      chunks: ['may-mariya'],
+      filename: 'pages/my_coding_partner.html'
+    }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",

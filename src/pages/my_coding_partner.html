@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Front End Friday</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /*Demo purposes only*/
-        body {
-            padding: 0 20px;
-        }
-    </style>
+    <title>November 18th</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto&display=swap" rel="stylesheet">
+
 
     <style>
         a.wwcode-link {
@@ -675,110 +679,324 @@
             font-family: Arial, Helvetica, sans-serif
         }
     </style>
+
+    <style>
+        :root {
+            --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --msger-bg: #fff;
+            --border: 2px solid #ddd;
+            --left-msg-bg: #ececec;
+            --right-msg-bg: #ececec;
+
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #bf07b8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .main-text {
+            font-size: 1.4rem;
+        }
+
+        .msger {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 867px;
+            margin: 25px 10px;
+            height: calc(100% - 50px);
+            border-radius: 5px;
+            background: #bf07b8;
+        }
+
+        .msger-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: #bf07b8;
+            color: #666;
+        }
+
+        .msger-chat {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .msger-chat::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .msger-chat::-webkit-scrollbar-track {
+            background: #bf07b8;
+        }
+
+        .msger-chat::-webkit-scrollbar-thumb {
+            background: #bf07b8;
+        }
+
+        .msg {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .msg:last-of-type {
+            margin: 0;
+        }
+
+        .msg-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            background: #bf07b8;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .msg-bubble {
+            max-width: 450px;
+            padding: 15px;
+            border-radius: 15px;
+            background: var(--left-msg-bg);
+        }
+
+        .msg-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .msg-info-name {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .msg-info-time {
+            font-size: 0.85em;
+        }
+
+        .left-msg .msg-bubble {
+            border-bottom-left-radius: 0;
+        }
+
+        .right-msg {
+            flex-direction: row-reverse;
+        }
+
+        .right-msg .msg-bubble {
+            background: var(--right-msg-bg);
+            color: #000000;
+            border-bottom-right-radius: 0;
+        }
+
+        .right-msg .msg-img {
+            margin: 0 0 0 10px;
+        }
+
+        .msger-inputarea {
+            display: flex;
+            padding: 10px;
+            background: #bf07b8
+        }
+
+        .msger-inputarea * {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+
+        .msger-input {
+            width: 300px;
+            height: 150px;
+            flex: 1;
+            background: #ddd;
+        }
+
+        .msger-send-btn {
+            height: 50px;
+            width: 190px;
+            margin-left: 10px;
+            background: #1f5d61;
+            border: 1px solid black;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.23s;
+        }
+
+        .msger-send-btn:hover {
+            background: rgb(0, 180, 50);
+        }
+    </style>
+
+
+
 </head>
 
-<body class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold my-3.5">Welcome to our Front End Fridays Repository!</h1>
-    <section>
+<body>
 
-        <div class="columns-12 flex flex-col">
-            <div class="mb-4">
-                <p class="font-bold text-xl">November</p>
-                <ul>
-                    <li><a href="pages/november18.html" class="wwcode-link">Nov 18th - 2022 </a></li>
-                </ul>
-            </div>
-
-
-            <div>
-                <p class="font-bold text-xl">December</p>
-                <ul>
-                    <li><a href="pages/dec2.html" class="wwcode-link">Card-Timer by Poulami Saha</a></li>
-                    <li><a href="pages/dec9.html" class="wwcode-link">Boading pass by Mariya Harizanova</a></li>
-                    <li><a href="pages/dec13.html" class="wwcode-link">Card-Timer by Mariya Harizanova</a></li>
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">January</p>
-                <ul>
-                    <li><a href="pages/january6.html" class="wwcode-link">Info Cards by Mariya Harizanova</a></li>
-                    <li><a href="pages/january18.html" class="wwcode-link">Info Card by Mariya Harizanova</a></li>
-                    <li><a href="pages/january-wallet.html" class="wwcode-link">Wallet by Mariya Harizanova</a></li>
-
-                    <li><a href="pages/jan6.html" class="wwcode-link">Banners by Poulami Saha</a></li>
-                    <li><a href="pages/jan6-luz.html" class="wwcode-link">Notifications by Luz De Leon</a></li>
-                    <li><a href="pages/jan13-poulami.html" class="wwcode-link">Profile by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <div class="pt-4">
-                <p class="font-bold text-xl">February </p>
-                <ul>
-
-                    <li><a href="pages/calculator.html" class="wwcode-link">Calculator By Mariya Harizanova</a></li>
-
-                    <li><a href="pages/jan13-poulami.html" class="wwcode-link">Profile by Poulami Saha</a></li>
-                    <li><a href="pages/jan27-poulami.html" class="wwcode-link">Digital Wallet by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">February</p>
-                <ul>
-                    <li><a href="pages/feb-4-poulami.html" class="wwcode-link">Digital Wallet With Adding New Card
-                            functionality by Poulami Saha</a></li>
-
-                </ul>
-            </div>
-            <br>
-            <div>
-                <p class="font-bold text-xl">March</p>
-                <ul>
-                    <li><a href="pages/march.html" class="wwcode-link">Recipe page by Mariya Harizanova
-                        </a></li>
-
-                </ul>
-            </div>
-            <div>
-                <p class="font-bold text-xl">March</p>
-                <ul>
-                    <li><a href="pages/mar-17-poulami.html" class="wwcode-link">E-Commerce Site by Poulami Saha</a></li>
-                    <li><a href="pages/mar-24-poulami.html" class="wwcode-link">Wellness App by Poulami Saha</a></li>
-                    <li><a href="pages/march-31-poulami.html" class="wwcode-link">WWC-Design by Poulami Saha</a></li>
-                </ul>
-            </div>
-            <div class="pb-5">
-                <p class="font-bold text-xl">April</p>
-                <ul>
-                    <li><a href="pages/april.html" class="wwcode-link">Women Who Code
-                            News by Mariya Harizanova</a></li>
-             
-                    <li><a href="pages/april-15.html" class="wwcode-link">BitTransactions app by Mariya Harizanova</a></li>
-                    <li><a href="pages/april-14-poulami.html" class="wwcode-link">Transactions by Poulami Saha</a></li>
-                    <li><a href="pages/april-21-poulami.html" class="wwcode-link">MyStore by Poulami Saha</a></li>
-                    <li><a href="pages/luz-april-14.html" class="wwcode-link">Transactions by Luz De Leon</a></li>
-                    <li><a href="pages/luz-april-21.html" class="wwcode-link">Drag & Drop by Luz De Leon</a></li>
-                </ul>
-            </div>
-                <div class="pb-5">
-                    <p class="font-bold text-xl">May</p>
-                    <ul>
-                        <li><a href="pages/may-file-upload-mariya.html" class="wwcode-link">Women Who Code
-                                File Upload  by Mariya Harizanova</a></li>
-                                    <li><a href="pages/my_coding_partner.html" class="wwcode-link">My Coding Partner by Mariya Harizanova</a></li>
-                    </ul>
-                   
+    <div class="container-fluid">
+        <div class="text-start">
+            <p class="main-text text-white">Paloma, My Coding Partner</p>
+        </div>
+        <section class="msger mx-auto">
+            <header class="msger-header">
+                <div class="msger-header-title">
                 </div>
-         
-            <div>
-                <p class="font-bold text-xl">May (upcoming)</p>
-                <ul>
-                    
-                </ul>
-            </div>
+                <div class="msger-header-options">
+                    <span><i class="fas fa-cog"></i></span>
+                </div>
+            </header>
+
+            <main class="msger-chat">
+                <div class="msg left-msg">
+                    <div class="msg-img" style="background-image: url(/images/File.jpg)">
+                    </div>
+
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">Mariya</div>
+                            <div class="msg-info-time">12:45</div>
+                        </div>
+
+                        <div class="msg-text">
+                            Hello, Paloma! What are we coding today?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="msg right-msg">
+                    <div class="msg-img"
+                        style="background-image: url(https://ca.slack-edge.com/THX1U2533-U03UXH8SWF9-060bd0f02ff4-512)">
+                    </div>
+
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name"></div>
+                            <div class="msg-info-time"></div>
+                        </div>
+
+                        <div class="msg-text">
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <form class="msger-inputarea">
+                <input type="text" class="msger-input" placeholder="">
+                <button type="submit" class="msger-send-btn">Send</button>
+            </form>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const msgerForm = get(".msger-inputarea");
+        const msgerInput = get(".msger-input");
+        const msgerChat = get(".msger-chat");
+
+        const BOT_MSGS = [
+            "You can use align-items: center in CSS so the div container aligns vertically all its children elements like this:<br>.container { <br>display: flex;<br> align-items: center;<br> }",
+            // "Ohh... I can't understand what you trying to say. Sorry!",
+            // "I like to play games... But I don't know how to play!",
+            // "Sorry if my answers are not relevant. :))",
+            // "I feel sleepy! :("
+        ];
+
+        // Icons made by Freepik from www.flaticon.com
+        const BOT_IMG = "https://ca.slack-edge.com/THX1U2533-U04CJ393AUD-7b8425767c53-512";
+        const PERSON_IMG = "https://ca.slack-edge.com/THX1U2533-U03UXH8SWF9-060bd0f02ff4-512";
+        const BOT_NAME = "Mariya";
+        const PERSON_NAME = "Paloma";
+
+        msgerForm.addEventListener("submit", event => {
+            event.preventDefault();
+
+            const msgText = msgerInput.value;
+            if (!msgText) return;
+
+            appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+            msgerInput.value = "";
+
+            botResponse();
+        });
+
+        function appendMessage(name, img, side, text) {
+            //   Simple solution for small apps
+            const msgHTML = `
+    <div class="msg ${side}-msg">
+      <div class="msg-img" style="background-image: url(${img})"></div>
+
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-name">${name}</div>
+          <div class="msg-info-time">${formatDate(new Date())}</div>
         </div>
 
-    </section>
+        <div class="msg-text">${text}</div>
+      </div>
+    </div>
+  `;
+
+            msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+            msgerChat.scrollTop += 500;
+        }
+
+        function botResponse() {
+            const r = random(0, BOT_MSGS.length - 1);
+            const msgText = BOT_MSGS[r];
+            const delay = msgText.split(" ").length * 100;
+
+            setTimeout(() => {
+                appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+            }, delay);
+        }
+
+        // Utils
+        function get(selector, root = document) {
+            return root.querySelector(selector);
+        }
+
+        function formatDate(date) {
+            const h = "0" + date.getHours();
+            const m = "0" + date.getMinutes();
+
+            return `${h.slice(-2)}:${m.slice(-2)}`;
+        }
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+    </script>
 </body>
 
 </html>
