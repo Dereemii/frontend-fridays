@@ -220,6 +220,12 @@ const config = {
       chunks: ['poulami-barbie'],
       filename: 'pages/poulami-barbie.html'
     }),
+    new HtmlWebpackPlugin({
+      template: "pages/poulami-sticker.html",
+      inject: true,
+      chunks: ['poulami-sticker'],
+      filename: 'pages/poulami-sticker.html'
+    }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
         from: "./assets",
