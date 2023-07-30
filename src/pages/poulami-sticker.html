@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sticker Maker</title>
+  </head>
+  <style>
+    .main-container {
+      background-color: bisque;
+    }
+
+    .content {
+      padding-inline: 3rem;
+      padding-block: 5rem;
+      max-width: 915px;
+    }
+    header,
+    footer {
+      background-color: #08d9d6;
+    }
+    .content-header {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: white;
+    }
+    .search {
+      background-color: white;
+      color: #08d9d6;
+      border-radius: 10px;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+    }
+
+    .latest {
+      background-color: white;
+      font-family: "Inter", sans-serif;
+    }
+    .sticker {
+      border-radius: 50%;
+    }
+    .memes-content {
+      background-color: #99dbf5;
+      border-radius: 20px;
+      margin-inline: 20px;
+    }
+    .sticky {
+      width: 20px;
+      height: 20px;
+    }
+    .top {
+      border-radius: 20px;
+    }
+    .top-icon {
+      width: 25px;
+      height: 25px;
+    }
+    .footer-text {
+      font-family: Inter;
+      font-size: 12px;
+      font-weight: 400;
+      text-align: center;
+      color: antiquewhite;
+    }
+    .footer-icon {
+      width: 40px;
+      height: 40px;
+      color: antiquewhite;
+    }
+    .sticky-text {
+      font-size: 12px;
+    }
+  </style>
+  <body>
+    <div
+      class="container-fluid main-container d-flex justify-content-center pb-5"
+    >
+      <div class="col-lg-5 col-12 content mt-5 pb-5">
+        <header class="p-3">
+          <p class="content-header">Sticker Maker</p>
+          <div class="search d-flex align-items-center mb-4">
+            <i class="fas fa-search ms-3"></i>
+            <p class="ms-2 mt-3">Search stickers</p>
+          </div>
+        </header>
+        <section class="latest p-3">
+          <div class="latest-header d-flex">
+            <i class="fas fa-calendar fa-1x"></i>
+            <h6 class="ms-3">Latest</h6>
+          </div>
+          <div class="d-flex p-1 justify-content-between">
+            <div>
+              <img
+                class="sticker img-fluid p-1"
+                src="../assets/poulami/sticker/image 1.png"
+              />
+            </div>
+            <div>
+              <img
+                class="sticker img-fluid p-1"
+                src="../assets/poulami/sticker/image 3.png"
+              />
+            </div>
+            <div>
+              <img
+                class="sticker img-fluid p-1"
+                src="../assets/poulami/sticker/image 4.png"
+              />
+            </div>
+            <div>
+              <img
+                class="img-fluid sticker p-1"
+                src="../assets/poulami/sticker/image 5.png"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="latest p-2">
+          <h6 class="ms-3">Memes</h6>
+          <div class="memes-content d-flex p-3 mb-2 justify-content-between">
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 6.png"
+                class="img-fluid px-1"
+              />
+            </div>
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 7.png"
+                class="img-fluid px-1"
+              />
+            </div>
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 8.png"
+                class="img-fluid px-1"
+              />
+            </div>
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 7.png"
+                class="img-fluid px-1"
+              />
+            </div>
+          </div>
+        </section>
+        <div class="latest p-1">
+          <div class="latest-header d-flex mb-3">
+            <h6 class="ms-3">Top Rated</h6>
+            <img
+              class="ms-3 top-icon img-fluid"
+              src="../assets/poulami/sticker/sparkles_icon_152754 1.png"
+            />
+          </div>
+          <div class="d-flex justify-content-between px-3 py-1">
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 9.png"
+                class="top img-fluid px-2"
+              />
+              <div class="d-flex m-2">
+                <img
+                  src="../assets/poulami/sticker/sticky_note.png"
+                  class="sticky"
+                />
+                <p class="sticky-text">30</p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 10.png"
+                class="top img-fluid px-2"
+              />
+              <div class="d-flex m-2">
+                <img
+                  src="../assets/poulami/sticker/sticky_note.png"
+                  class="sticky"
+                />
+                <p class="sticky-text">30</p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 11.png"
+                class="top img-fluid px-2"
+              />
+              <div class="d-flex m-2">
+                <img
+                  src="../assets/poulami/sticker/sticky_note.png"
+                  class="sticky"
+                />
+                <p class="sticky-text">30</p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="../assets/poulami/sticker/image 7.png"
+                class="top img-fluid px-2"
+              />
+              <div class="d-flex m-2">
+                <img
+                  src="../assets/poulami/sticker/sticky_note.png"
+                  class="sticky"
+                />
+                <p class="sticky-text">30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="d-flex justify-content-between px-5 py-2">
+          <div class="footer-item">
+            <img src="../assets/poulami/sticker/save.png" class="footer-icon" />
+            <p class="mt-2 footer-text">Saved</p>
+          </div>
+          <div class="footer-item">
+            <img
+              src="../assets/poulami/sticker/add_circle_FILL0_wght400_GRAD0_opsz48 1.png"
+              class="footer-icon"
+            />
+            <p class="mt-2 footer-text">Saved</p>
+          </div>
+          <div class="footer-item">
+            <img
+              src="../assets/poulami/sticker/global.png"
+              class="footer-icon"
+            />
+            <p class="mt-2 footer-text">Saved</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/31f1e9c64c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
