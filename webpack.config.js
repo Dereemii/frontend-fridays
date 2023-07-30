@@ -221,6 +221,11 @@ const config = {
       filename: 'pages/poulami-barbie.html'
     }),
     new HtmlWebpackPlugin({
+      template: "pages/poulami-pet.html",
+      inject: true,
+      chunks: ['poulami-pet'],
+      filename: 'pages/poulami-pet.html'
+
       template: "pages/poulami-sticker.html",
       inject: true,
       chunks: ['poulami-sticker'],

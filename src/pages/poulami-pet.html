@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pet Adoption</title>
+  </head>
+  <style>
+    .find-friend {
+      font-family: Dosis;
+      font-size: 50px;
+      font-weight: 700;
+      color: #302b3a;
+    }
+    .friend {
+      color: #9a93ff;
+    }
+    .desc {
+      font-family: Dosis;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .count {
+      font-family: Dosis;
+      font-size: 35px;
+      font-weight: 650;
+      line-height: 0.5;
+    }
+    .searchbar {
+      border-radius: 20px;
+      width: 70%;
+    }
+    .input-text {
+      font-family: Dosis;
+      font-size: 22px;
+      font-weight: 400;
+      color: #9a93ff;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      width: 70%;
+    }
+    .pet-hello {
+      font-family: Dosis;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .pet-name {
+      font-family: Dosis;
+      font-size: 20px;
+      font-weight: 600;
+      color: #9a93ff;
+      line-height: 0;
+    }
+    .pet-image {
+      height: 70%;
+      width: 70%;
+    }
+    .adopt {
+      background: #ada7ff;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .adopt-text {
+      font-family: Dosis;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+    }
+    .adopt-icon {
+      height: 30px;
+      width: 30px;
+    }
+    .contain-bg {
+      background-color: #302b3a;
+    }
+    .nav-link {
+      font-size: 15px;
+    }
+    .active {
+      color: #9a93ff !important;
+    }
+    @media screen and (max-width: 990px) {
+      .navbar-mobile {
+        background-color: #ada7ff;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .find-friend {
+        font-size: 40px;
+      }
+      .desc {
+        font-size: 15px;
+      }
+      .count {
+        font-size: 23px;
+      }
+      .searchbar {
+        margin-bottom: 2rem;
+      }
+      .pet-image {
+        height: 60%;
+        width: 50%;
+      }
+      .pet-hello {
+        font-size: 15px;
+      }
+      .pet-name {
+        font-size: 22px;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid navbar-mobile">
+        <img class="d-none d-md-block" src="../assets/poulami/pet/Logo.png" />
+        <img
+          class="d-md-none m-3"
+          src="../assets/poulami/pet/pet-logo-white.png"
+        />
+        <button
+          class="navbar-toggler mx-5 my-4"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon">
+            <i class="fas fa-bars" style="color: #fff; font-size: 28px"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="row">
+      <div class="col-lg-7 col-md-5 ps-5 mt-5">
+        <p class="find-friend ms-5">
+          Find your new <span class="friend">best friend</span>
+        </p>
+        <p class="desc ms-5">
+          Let's get started. Search pets from shelters, rescues, and
+          individuals.
+        </p>
+        <div class="d-flex justify-content-around p-3">
+          <div>
+            <p class="count">828,037+</p>
+            <p class="desc">Rescue Dog saved</p>
+          </div>
+          <div>
+            <p class="count">654,824+</p>
+            <p class="desc">Rescue Cat Saved</p>
+          </div>
+        </div>
+
+        <div class="input-group ms-5 searchbar">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Type your Location here..."
+          />
+          <span class="input-group-text adopt adopt-text" id="basic-addon2"
+            >adopt now<i class="fas fa-search ms-2"></i
+          ></span>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-3 d-flex flex-column align-items-center">
+        <img src="../assets/poulami/pet/pet-image.png" class="pet-image" />
+        <div class="d-flex justify-content-around">
+          <div class="m-3">
+            <p class="pet-hello">Hi! My name is:</p>
+            <p class="pet-name">Rosalina</p>
+          </div>
+          <div class="adopt m-3 p-3">
+            <span class="adopt-text">adopt me</span>
+            <img
+              src="../assets/poulami/pet/pet-logo-white.png"
+              class="adopt-icon ms-3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/31f1e9c64c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
