@@ -225,6 +225,11 @@ const config = {
       inject: true,
       chunks: ['poulami-pet'],
       filename: 'pages/poulami-pet.html'
+
+      template: "pages/poulami-sticker.html",
+      inject: true,
+      chunks: ['poulami-sticker'],
+      filename: 'pages/poulami-sticker.html'
     }),
     new CopyWebpackPlugin({ //assets only
       patterns: [{
