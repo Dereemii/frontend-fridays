@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -15,17 +15,27 @@
         },
       };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Sansita:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Sansita:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
+  <style>
+    body {
+      background-image: url(../assets/poulami/Union.png),
+        url(../assets/poulami/bg2.png);
+      background-repeat: no-repeat;
+      background-position: top center, bottom left;
+      z-index: 1;
+    }
+  </style>
   <body>
-    <div
-      class="flex flex-col justify-center items-center min-h-screen bg-rose-50"
-    >
+    <div class="flex flex-col justify-center items-center min-h-screen">
       <div class="w-80 rounded-3xl bg-[#DDF1F5] absolute">
-        <img src="../assets/poulami/earth.png" class="mt-2"/>
-        <img src="../assets/poulami/girl.png" />
+        <img src="../assets/poulami/Header.png" alt="" />
       </div>
       <div
         class="w-80 flex flex-col items-center justify-center bg-[#1D99B5] p-8 rounded-b-3xl absolute mt-[19rem]"
@@ -39,8 +49,8 @@
         <div
           class="flex bg-[#F9FDFEC7] px-2 w-full rounded-l justify-space-between items-center m-6 space-x-2"
         >
-          <img src="../assets/poulami/plane-icon.png" class="h-10 w-10 m-4" />
-          <div class="flex flex-col">
+          <img src="../assets/poulami/plane-icon.png" class="h-8 w-8 m-4" />
+          <div class="flex flex-col space-y-1">
             <p class="text-[#135F70] font-bold font-serif">Annual Plan</p>
             <p class="text-[#78B4C1] font-bold font-serif">$39.99/year</p>
           </div>
